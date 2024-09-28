@@ -19,3 +19,11 @@ bdep init -C @gcc cc config.cxx=g++
 bdep update
 bdep test
 ```
+
+## Feature support
+
+- Uses STL `<format>`
+- Uses MS-GSL for contracts
+- No support for the modules variant
+- No support for freestanding build
+- Default behaviour regarding string_view and CRTP variants (enabled if supported)
