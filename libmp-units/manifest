@@ -1,0 +1,16 @@
+: 1
+name: libmp-units
+version: 2.3.0-a.0.z
+type: lib,binless
+language: c++
+project: mp-units
+summary: The quantities and units library for C++
+license: MIT ; MIT License.
+description-file: README.md
+package-description-file: PACKAGE-README.md
+changes-file: CHANGELOG.md
+url: https://github.com/mpusz/mp-units
+package-url: https://github.com/build2-packaging/mp-units
+package-email: packaging@build2.org ; Mailing list.
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0

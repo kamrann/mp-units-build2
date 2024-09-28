@@ -1,0 +1,7 @@
+project = libmp-units
+
+using version
+using config
+using test
+using install
+using dist

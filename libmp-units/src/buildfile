@@ -1,0 +1,27 @@
+intf_libs = # Interface dependencies.
+#import xxxx_libs += libhello%lib{hello}
+
+lib{mp-units}: hxx{**} $intf_libs
+
+# Export options.
+#
+# out_pfx = [dir_path] $out_root/src/core/include/
+# src_pfx = [dir_path] $src_root/src/core/include/
+core_out_pfx    = [dir_path] $out_root/src/core/include/
+core_src_pfx    = [dir_path] $src_root/src/core/include/
+systems_out_pfx = [dir_path] $out_root/src/systems/include/
+systems_src_pfx = [dir_path] $src_root/src/systems/include/
+
+lib{mp-units}:
+{
+  cxx.export.poptions = "-I$core_out_pfx" "-I$core_src_pfx" "-I$systems_out_pfx" "-I$systems_src_pfx"
+  cxx.export.libs = $intf_libs
+}
+
+# Install recreating subdirectories.
+#
+hxx{*}:
+{
+  install         = include/
+  install.subdirs = true
+}
