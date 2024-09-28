@@ -1,0 +1,10 @@
+: sigabrt
+: Check that MS-GSL contracts are enabled
+:
+: The driver of this test runs an EXPECTS(false)
+: clause which should cause a runtime check failure.
+: The resulting behaviour is a SIGABRT.
+: This test is disabled because the test runner
+: catches the SIGABRT and marks the test as failed
+# $* >- 2>- != 0
+true

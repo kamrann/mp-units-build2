@@ -1,7 +1,7 @@
-intf_libs = # Interface dependencies.
-#import xxxx_libs += libhello%lib{hello}
+gsl = # Interface dependencies.
+import gsl += gsl%lib{gsl}
 
-lib{mp-units}: hxx{**} $intf_libs
+lib{mp-units}: hxx{**} $gsl
 
 # Export options.
 #
@@ -15,7 +15,7 @@ systems_src_pfx = [dir_path] $src_root/src/systems/include/
 lib{mp-units}:
 {
   cxx.export.poptions = "-I$core_out_pfx" "-I$core_src_pfx" "-I$systems_out_pfx" "-I$systems_src_pfx"
-  cxx.export.libs = $intf_libs
+  cxx.export.libs = $gsl
 }
 
 # Install recreating subdirectories.

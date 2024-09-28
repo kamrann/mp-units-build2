@@ -1,0 +1,3 @@
+import libs = libmp-units%lib{mp-units}
+
+exe{driver}: {cxx hxx}{**} $libs testscript
