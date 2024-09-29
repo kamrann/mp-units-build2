@@ -20,7 +20,13 @@ lib{mp-units}:
 
 # Install recreating subdirectories.
 #
-hxx{*}:
+core/include/hxx{*}:
+{
+  install         = include/
+  install.subdirs = true
+}
+
+systems/include/hxx{*}:
 {
   install         = include/
   install.subdirs = true
