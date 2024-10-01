@@ -1,0 +1,18 @@
+: 1
+name: libmp-units-tests
+version: 2.3.0-a.0.z
+type: exe
+language: c++
+project: mp-units
+summary: Tests for the mp-units library
+license: MIT ; MIT License.
+description-file: README.md
+package-description-file: PACKAGE-README.md
+changes-file: CHANGELOG.md
+url: https://github.com/mpusz/mp-units
+package-url: https://github.com/build2-packaging/mp-units
+package-email: packaging@build2.org ; Mailing list.
+depends: * libmp-units == $
+depends: * catch2 >= 3.0.0
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0

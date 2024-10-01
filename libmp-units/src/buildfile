@@ -14,7 +14,7 @@ systems_src_pfx = [dir_path] $src_root/src/systems/include/
 
 lib{mp-units}:
 {
-  cxx.export.poptions = "-I$core_out_pfx" "-I$core_src_pfx" "-I$systems_out_pfx" "-I$systems_src_pfx"
+  cxx.export.poptions = "-I$core_out_pfx" "-I$core_src_pfx" "-I$systems_out_pfx" "-I$systems_src_pfx" "-DMP_UNITS_HOSTED"
   cxx.export.libs = $gsl
 }
 

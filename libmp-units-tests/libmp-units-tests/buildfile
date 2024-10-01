@@ -1,0 +1,13 @@
+import mp_units = libmp-units%lib{mp-units}
+import catch2 = catch2%lib{catch2} catch2%liba{catch2wmain}
+
+exe{unit_tests_static}: \
+    cxx{stub_main} \
+    static/cxx{** -custom_rep_test_min_expl.cpp -magnitude_test.cpp } \
+    $mp_units
+
+exe{unit_tests_runtime}: \
+    runtime/cxx{** -linear_algebra_test.cpp } \
+    $mp_units $catch2
+
+./: exe{unit_tests_static} exe{unit_tests_runtime}

@@ -1,2 +1,5 @@
 : 1
 location: libmp-units/
+
+:
+location: libmp-units-tests/
